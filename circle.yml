@@ -1,0 +1,9 @@
+machine:
+  ruby:
+    version: rbx-2.0.0
+
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: sample-rails4
