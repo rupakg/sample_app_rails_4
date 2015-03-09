@@ -17,6 +17,11 @@ install:
   - bundle install --gemfile="Gemfile"
   - ruby -v
 
+before_script: 
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
+  - cp config/database.yml.example config/database.yml
+  
 script:
   - bundle exec rake
   
