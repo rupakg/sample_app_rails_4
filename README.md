@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/rupakg/sample_app_rails_4.svg?style=svg)](https://circleci.com/gh/rupakg/sample_app_rails_4)
+
 # Ruby on Rails Tutorial: sample application
 
 This is the sample application for
