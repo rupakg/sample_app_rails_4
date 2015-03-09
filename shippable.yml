@@ -14,7 +14,7 @@ before_install:
 
 #install the dependencies
 install:
-  - bundle install --gemfile="Gemfile" --development
+  - bundle install --gemfile="Gemfile" --without production
   - ruby -v
 
 before_script: 
