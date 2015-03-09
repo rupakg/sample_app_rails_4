@@ -4,7 +4,6 @@ deployment:
     commands:
       - heroku maintenance:on --app sample-rails4
       - git push git@heroku.com:sample-rails4.git $CIRCLE_SHA1:refs/heads/master
-      - heroku pgbackups
       - heroku run rake db:migrate --app sample-rails4:
           timeout: 400 # if your deploys take a long time
       - heroku maintenance:off --app sample-rails4
