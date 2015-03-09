@@ -14,7 +14,7 @@ before_install:
 
 #install the dependencies
 install:
-  - bundle install --gemfile="Gemfile"
+  - bundle install --gemfile="Gemfile" --development
   - ruby -v
 
 before_script: 
@@ -23,7 +23,9 @@ before_script:
   - cp config/database.yml.example config/database.yml
   
 script:
-  - bundle exec rake
+  - bundle exec rake db:migrate
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
   
 env:
   global:
